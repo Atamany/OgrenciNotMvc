@@ -1,0 +1,36 @@
+﻿@model OgrenciNotMvc.Models.EntityFramework.TblNotlar
+@{
+    ViewBag.Title = "YeniSinav";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <form method="post" class="form-group">
+        <div>
+            <label>Öğrenci</label>
+            @Html.DropDownListFor(m => m.OgrId, (List<SelectListItem>)ViewBag.dgr, "Öğrenci Seçin", new { @class = "form-control" })
+        </div>
+        <div style="margin-top: 10px;">
+            <label>Ders Adı</label>
+            @Html.DropDownListFor(m => m.DersId, (List<SelectListItem>)ViewBag.ders, "Ders Seçin", new { @class = "form-control" })
+        </div>
+        <div style="margin-top: 10px;">
+            <label>Sınav 1</label>
+            <input type="text" class="form-control" name="Sinav1" />
+        </div>
+        <div style="margin-top: 10px;">
+            <label>Sınav 2</label>
+            <input type="text" class="form-control" name="Sinav2" />
+        </div>
+        <div style="margin-top: 10px;">
+            <label>Sınav 3</label>
+            <input type="text" class="form-control" name="Sinav3" />
+        </div>
+        <div style="margin-top: 10px;">
+            <label>Proje</label>
+            <input type="text" class="form-control" name="Proje" />
+        </div>
+        <div style="margin-top:10px;">
+            <button class="btn btn-info">Sınav Ekle</button><br />
+        </div>
+    </form>
+</div>

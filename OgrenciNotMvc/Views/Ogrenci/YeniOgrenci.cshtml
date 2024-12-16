@@ -1,0 +1,35 @@
+﻿@model OgrenciNotMvc.Models.EntityFramework.TblOgrenciler
+@{
+    ViewBag.Title = "YeniOgrenci";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form method="post" class="form-group">
+    <div>
+        <label>Öğrenci Adı</label>
+        <input type="text" class="form-control" name="OgrAd" />
+    </div>
+    <div style="margin-top: 10px;">
+        <label>Öğrenci Soyadı</label>
+        <input type="text" class="form-control" name="OgrSoyad" />
+    </div>
+    <div style="margin-top: 10px;">
+        <label>Öğrenci Fotoğrafı</label>
+        <input type="text" class="form-control" name="OgrFotograf" />
+    </div>
+    <div style="margin-top: 10px;">
+        <div class="form-group">
+            <label>Öğrenci Cinsiyeti</label><br />
+            <input type="radio" name="ogrCinsiyet" value="Erkek" />Erkek<br />
+            <input type="radio" name="ogrCinsiyet" value="Kız" />Kız<br />
+            </div>
+        </div>
+        <div style="margin-top: 10px;">
+            <label>Öğrenci Kulüp</label>
+            @Html.DropDownListFor(m => m.TblKulupler.KulupId, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })
+        </div>
+        <div style="margin-top:10px;">
+            <button class="btn btn-info">Öğrenci Ekle</button>
+        </div>
+</form>
+

@@ -1,0 +1,63 @@
+﻿@using OgrenciNotMvc.Models.EntityFramework
+@model List<TblNotlar>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Not ID</th>
+        <th>Öğrenci</th>
+        <th>Ders</th>
+        <th>Sınav 1</th>
+        <th>Sınav 2</th>
+        <th>Sınav 3</th>
+        <th>Proje</th>
+        <th>Ortalama</th>
+        <th>Durum</th>
+        <th>Güncelle</th>
+    </tr>
+    <tbody>
+        @foreach (var snv in Model)
+        {
+            <tr>
+                <td>@snv.NotId</td>
+                <td>
+                    @if (snv.TblOgrenciler != null)
+                    {
+                        @snv.TblOgrenciler.OgrAd @: @snv.TblOgrenciler.OgrSoyad
+                    }
+                    else
+                    {
+                        @:Öğrenci bilgisi bulunamadı
+                    }
+                </td>
+                <td>
+                    @(snv.TblDersler != null ? snv.TblDersler.DersAd : "Ders Bilgisi Yok")
+                </td>
+                <td>@snv.Sinav1</td>
+                <td>@snv.Sinav2</td>
+                <td>@snv.Sinav3</td>
+                <td>@snv.Proje</td>
+                <td>@snv.Ortalama</td>
+
+                <td>
+                    @if (snv.Durum == true)
+                    {
+                        @:Geçti!
+                    }
+                    @if (snv.Durum == false)
+                    {
+                        @:Kaldı!
+                    }
+                </td>
+
+                <td><a href="/Notlar/NotGetir/@snv.NotId" class="btn btn-warning">Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<a href="/Notlar/YeniSinav" class="btn btn-primary">Yeni Sınav Girişi</a>

@@ -1,0 +1,36 @@
+﻿@model OgrenciNotMvc.Models.EntityFramework.TblNotlar
+@{
+    ViewBag.Title = "NotGetir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("NotGetir", "Notlar", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Sinav1)
+        @Html.TextBoxFor(m => m.Sinav1, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Sinav2)
+        @Html.TextBoxFor(m => m.Sinav2, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Sinav3)
+        @Html.TextBoxFor(m => m.Sinav3, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Proje)
+        @Html.TextBoxFor(m => m.Proje, new { @class = "form-control" })
+    </div>
+
+    @Html.HiddenFor(m => m.NotId)
+<div>
+    <button type="submit" name="islem" value="NotGuncelle" class="btn btn-info">Güncelle</button>
+</div>
+}
+
+
+

@@ -1,0 +1,42 @@
+﻿@model OgrenciNotMvc.Models.EntityFramework.TblOgrenciler
+@{
+    ViewBag.Title = "OgrenciGetir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Guncelle", "Ogrenci", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.OgrAd)
+        @Html.TextBoxFor(m => m.OgrAd, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.OgrSoyad)
+        @Html.TextBoxFor(m => m.OgrSoyad, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.OgrFotograf)
+        @Html.TextBoxFor(m => m.OgrFotograf, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.OgrKulup)
+        @Html.DropDownListFor(m => m.OgrKulup, (List<SelectListItem>)ViewBag.dgr, new {@class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.OgrCinsiyet)
+        <br />
+        @Html.RadioButtonFor(m => m.OgrCinsiyet, "Erkek", Model.OgrCinsiyet == "Erkek") Erkek
+        <br />
+        @Html.RadioButtonFor(m => m.OgrCinsiyet, "Kız", Model.OgrCinsiyet == "Kız") Kız
+    </div>
+
+    @Html.HiddenFor(m => m.OgrenciId)
+    <div style="margin-top:15px;">
+        <button class="btn btn-info">Güncelle</button>
+    </div>
+}
+
