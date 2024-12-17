@@ -23,13 +23,13 @@
             <input type="radio" name="ogrCinsiyet" value="Erkek" />Erkek<br />
             <input type="radio" name="ogrCinsiyet" value="Kız" />Kız<br />
             </div>
-        </div>
-        <div style="margin-top: 10px;">
-            <label>Öğrenci Kulüp</label>
+    </div>
+    <div style="margin-top: 10px;">
+        <label>Öğrenci Kulüp</label>
             @Html.DropDownListFor(m => m.TblKulupler.KulupId, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })
-        </div>
-        <div style="margin-top:10px;">
-            <button class="btn btn-info">Öğrenci Ekle</button>
-        </div>
+    </div>
+    <div style="margin-top:10px;">
+        <button class="btn btn-info">Öğrenci Ekle</button>
+    </div>
 </form>
 

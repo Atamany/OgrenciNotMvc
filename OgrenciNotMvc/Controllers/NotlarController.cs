@@ -38,7 +38,7 @@ namespace OgrenciNotMvc.Controllers
         }
         [HttpPost]
         public ActionResult YeniSinav(TblNotlar tbn, int sinav1 = 0, int sinav2 = 0, int sinav3 = 0, int proje = 0)
-        {
+        { 
             // Öğrenci ID'sini alıyoruz ve TblNotlar'a atıyoruz
             tbn.OgrId = tbn.OgrId; // Formdan alınan OgrId'yi doğrudan atıyoruz
 
