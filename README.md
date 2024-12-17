@@ -1,4 +1,4 @@
-<h1> 🚀 C# EĞİTİM KAMPI 301 </h1>
+<h1> 🚀 Mvc Öğrenci Not Sistemi </h1>
 <h3>.Net MVC ile hazırlanmış, Kulüp/Ders/Öğrenci/Not işlemlerinin yapılabileceği ve yönetilebileceği basit seviye bir ders sistemi.</h3><br />
 
 <h3>Öğrenci Listeleme Ekranı</h3>
