@@ -1,5 +1,6 @@
 <h1> 🚀 Mvc Öğrenci Not Sistemi </h1>
 <h3>.Net MVC ile hazırlanmış, Kulüp/Ders/Öğrenci/Not işlemlerinin yapılabileceği ve yönetilebileceği basit seviye bir ders sistemi.</h3><br />
+<p> 🏷️ Murat Yücedağ tarafından Udemy eğitim platformunda yayınlanan "MVC5 ile Sıfırdan Adım Adım Web Projesi Geliştirme" eğitimi kapsamında tamamladığım 1. proje.</p>
 
 <h3>Öğrenci Listeleme Ekranı</h3>
 <img src="https://github.com/user-attachments/assets/8f67cbce-f832-473d-a2e2-eb94a53c52c5" title="Öğrenci Listeleme Ekranı" alt="Öğrenci Listeleme Ekranı">
